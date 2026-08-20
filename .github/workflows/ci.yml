@@ -1,0 +1,47 @@
+name: CI
+
+# Corre en el trabajo diario sobre develop y, sobre todo, antes de que algo
+# entre a main: main es lo que ve el cliente, asi que nada llega ahi sin pasar.
+on:
+  push:
+    branches: [develop, main]
+  pull_request:
+    branches: [main, develop]
+
+# Si se pushea dos veces seguidas, cancela la corrida vieja en vez de gastar
+# minutos revisando un commit que ya quedo atras.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    name: Lint, tipos y build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Traer el codigo
+        uses: actions/checkout@v4
+
+      - name: Preparar Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # npm ci instala exactamente lo del package-lock: la misma version que
+      # corre en Vercel, sin sorpresas por una dependencia que se actualizo sola.
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Revisar estilo de codigo
+        run: npx eslint .
+
+      - name: Revisar tipos
+        run: npx tsc --noEmit
+
+      # El paso que de verdad protege la demo: si el build falla, Vercel tampoco
+      # habria podido publicar, y nos enteramos aca en vez de frente al cliente.
+      - name: Compilar para produccion
+        run: npm run build
