@@ -9,14 +9,14 @@ const tiles = [
     text: "El conjunto perfecto para romper la calle.",
     href: "#tracksuits",
     image:
-      "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1000&q=80",
+      "/img/marni-red-black-suit.webp",
   },
   {
     title: "ACCESORIOS",
     text: "El detalle que cierra el look.",
     href: "#accesorios",
     image:
-      "https://images.unsplash.com/photo-1548036328-c085554afee5?auto=format&fit=crop&w=1000&q=80",
+      "/img/longines-master-collection.webp",
   },
 ];
 

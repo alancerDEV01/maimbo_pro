@@ -10,7 +10,7 @@ export function EditorialBanner() {
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[280px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]">
           <Image
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80"
+            src="/img/blue-black-check-shirt.webp"
             alt="Luxury Tracksuits campaign"
             fill
             className="object-cover"

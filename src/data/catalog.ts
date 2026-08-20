@@ -28,7 +28,7 @@ export const heroes = [
     cta: "Comprar ahora",
     secondary: "Ver colección",
     image:
-      "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1600&q=80",
+      "/img/men-check-shirt.webp",
   },
   {
     id: "h2",
@@ -38,7 +38,7 @@ export const heroes = [
     cta: "Comprar ahora",
     secondary: "Ver novedades",
     image:
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1600&q=80",
+      "/img/gray-dress.webp",
   },
   {
     id: "h3",
@@ -48,7 +48,7 @@ export const heroes = [
     cta: "Explorar drop",
     secondary: "Ver más",
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=80",
+      "/img/dress-pea.webp",
   },
 ];
 
@@ -62,63 +62,63 @@ export const benefits = [
 
 const img = {
   suit1:
-    "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80",
+    "/img/rolex-cellini-date-black-dial.webp",
   suit2:
-    "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=80",
+    "/img/nike-air-jordan-1-red-and-black.webp",
   suit3:
-    "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+    "/img/corset-leather-with-skirt.webp",
   suit4:
-    "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80",
+    "/img/green-and-black-glasses.webp",
   suit5:
-    "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
+    "/img/blue-frock.webp",
   suit6:
-    "https://images.unsplash.com/photo-1496360167021-07b75adcac4b?auto=format&fit=crop&w=800&q=80",
+    "/img/brown-leather-belt-watch.webp",
   hoodie1:
-    "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "/img/nike-baseball-cleats.webp",
   hoodie2:
-    "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+    "/img/pampi-shoes.webp",
   hoodie3:
-    "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?auto=format&fit=crop&w=800&q=80",
+    "/img/rolex-datejust-women.webp",
   hoodie4:
-    "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+    "/img/man-short-sleeve-shirt.webp",
   jacket:
-    "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80",
+    "/img/puma-future-rider-trainers.webp",
   tee1:
-    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "/img/girl-summer-dress.webp",
   tee2:
-    "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+    "/img/party-glasses.webp",
   tee3:
-    "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "/img/classic-sun-glasses.webp",
   tee4:
-    "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=800&q=80",
+    "/img/rolex-cellini-moonphase.webp",
   tee5:
-    "https://images.unsplash.com/photo-1618354691438-25bc04584c23?auto=format&fit=crop&w=800&q=80",
+    "/img/rolex-datejust.webp",
   jean1:
-    "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80",
+    "/img/heshe-women-s-leather-bag.webp",
   jean2:
-    "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+    "/img/green-oval-earring.webp",
   jean3:
-    "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=800&q=80",
+    "/img/black-women-s-gown.webp",
   jean4:
-    "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&w=800&q=80",
+    "/img/red-shoes.webp",
   women1:
-    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+    "/img/gigabyte-aorus-men-tshirt.webp",
   women2:
-    "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80",
+    "/img/black-brown-slipper.webp",
   women3:
-    "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80",
+    "/img/green-crystal-earring.webp",
   women4:
-    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80",
+    "/img/calvin-klein-heel-shoes.webp",
   women5:
-    "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+    "/img/corset-leather-with-skirt.webp",
   bag:
-    "https://images.unsplash.com/photo-1548036328-c085554afee5?auto=format&fit=crop&w=800&q=80",
+    "/img/man-plaid-shirt.webp",
   cap:
-    "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "/img/prada-women-bag.webp",
   shoe:
-    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+    "/img/iwc-ingenieur-automatic-steel.webp",
   watch:
-    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+    "/img/golden-shoes-woman.webp",
 };
 
 export const products: Product[] = [
@@ -394,21 +394,21 @@ export const drops = [
     title: "ROA X MAIMBO",
     text: "No todas las piezas nacen para venderse. Colección pensada para romper escena.",
     image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80",
+      "/img/blue-women-s-handbag.webp",
   },
   {
     id: "d2",
     title: "DRIP MUNDIAL",
     text: "Cuando el trap y MAIMBO conectan. Flow propio, rebeldía elegante.",
     image:
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80",
+      "/img/black-sun-glasses.webp",
   },
   {
     id: "d3",
     title: "CHROME SESSION",
     text: "MAIMBO no sigue modas: las diseña. Piezas para pertenecer.",
     image:
-      "https://images.unsplash.com/photo-1514525253161-7a06099aae73?auto=format&fit=crop&w=1200&q=80",
+      "/img/corset-with-black-skirt.webp",
   },
 ];
 
