@@ -79,14 +79,14 @@ export function ProductCarousel({ title, subtitle, products }: Props) {
         >
           {products.map((product, i) => (
             <motion.article
-              key={product.id}
+              key={`${anchor}-${product.id}-${i}`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: Math.min(i * 0.04, 0.24) }}
               className="group relative w-[72vw] shrink-0 snap-start sm:w-[260px] lg:w-[280px]"
             >
-              <div className="relative aspect-[3/4] overflow-hidden bg-bg-soft">
+              <div className="product-media relative aspect-[3/4] overflow-hidden border border-line/60">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -94,12 +94,16 @@ export function ProductCarousel({ title, subtitle, products }: Props) {
                   className="object-cover transition duration-700 group-hover:scale-105"
                   sizes="280px"
                 />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"
+                  aria-hidden
+                />
                 {product.tag && (
-                  <span className="absolute left-3 top-3 bg-accent px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-black">
+                  <span className="absolute left-3 top-3 z-10 bg-accent px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-black">
                     {product.tag}
                   </span>
                 )}
-                <div className="absolute inset-x-0 bottom-0 translate-y-full bg-black/80 p-3 transition duration-300 group-hover:translate-y-0">
+                <div className="absolute inset-x-0 bottom-0 z-10 translate-y-full bg-black/85 p-3 transition duration-300 group-hover:translate-y-0">
                   <button
                     type="button"
                     className="display w-full bg-accent py-2 text-lg text-black transition hover:bg-white"

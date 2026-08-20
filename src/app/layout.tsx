@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Archivo } from "next/font/google";
+import { Bebas_Neue, Archivo, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const display = Bebas_Neue({
@@ -15,14 +15,21 @@ const body = Archivo({
   display: "swap",
 });
 
+const editorial = Cormorant_Garamond({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-editorial",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "MAIMBO | Streetwear Only",
+  title: "MAIMBO | Vende Estilo",
   description:
-    "Prototype e-commerce streetwear MAIMBO. Drops, actitud y ropa urbana para romper la calle.",
+    "MAIMBO streetwear en Sucre. Local en Ostria Reyes 555. Envíos a todo Bolivia.",
   metadataBase: new URL("https://maimbo.local"),
   openGraph: {
-    title: "MAIMBO | Streetwear Only",
-    description: "Drip mode activated. Piezas urbanas, drops y actitud.",
+    title: "MAIMBO | Vende Estilo",
+    description: "Local en Sucre · Envíos a todo Bolivia · Streetwear.",
     type: "website",
   },
 };
@@ -34,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${display.variable} ${body.variable} antialiased`}>
+      <body className={`${display.variable} ${body.variable} ${editorial.variable} antialiased`}>
         <div className="noise" aria-hidden />
         {children}
       </body>

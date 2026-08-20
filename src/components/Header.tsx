@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { categories } from "@/data/catalog";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-bg/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 lg:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 lg:px-6">
         <button
           type="button"
           className="display text-2xl tracking-widest text-chrome lg:hidden"
@@ -21,16 +21,7 @@ export function Header() {
           ≡
         </button>
 
-        <a href="#inicio" className="relative flex items-center gap-2">
-          <Image
-            src="/logo-maimbo.png"
-            alt="MAIMBO"
-            width={180}
-            height={54}
-            priority
-            className="h-10 w-auto object-contain drop-shadow-[0_0_18px_rgba(184,255,46,0.35)] sm:h-12"
-          />
-        </a>
+        <BrandLogo size="md" priority />
 
         <nav className="hidden items-center gap-5 lg:flex" aria-label="Categorías">
           {categories.map((cat) => (
@@ -83,7 +74,7 @@ export function Header() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mb-8 flex items-center justify-between">
-                <span className="display text-3xl text-accent">MENÚ</span>
+                <BrandLogo size="sm" href={null} />
                 <button type="button" onClick={() => setOpen(false)} className="text-muted">
                   Cerrar
                 </button>

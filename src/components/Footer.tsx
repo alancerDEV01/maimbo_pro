@@ -1,23 +1,42 @@
 "use client";
 
-import Image from "next/image";
 import { categories } from "@/data/catalog";
+import { BrandLogo } from "@/components/BrandLogo";
+
+const socials = [
+  {
+    label: "Instagram",
+    handle: "@maimbo.stre",
+    href: "https://www.instagram.com/maimbo.stre",
+  },
+  {
+    label: "WhatsApp",
+    handle: "75769315",
+    href: "https://wa.me/59175769315",
+  },
+  {
+    label: "TikTok",
+    handle: "@maimbo.stre",
+    href: "https://www.tiktok.com/@maimbo.stre",
+  },
+  {
+    label: "Facebook",
+    handle: "MAIMBO",
+    href: "https://www.facebook.com/maimbo.stre",
+  },
+];
 
 export function Footer() {
   return (
     <footer id="footer" className="bg-black pt-14 pb-8">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-[1.2fr_1fr_1fr] lg:px-6">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-[1.3fr_1fr_1fr] lg:px-6">
         <div>
-          <Image
-            src="/logo-maimbo.png"
-            alt="MAIMBO"
-            width={160}
-            height={48}
-            className="h-12 w-auto object-contain"
-          />
-          <p className="mt-4 max-w-sm text-sm text-muted">
-            MAIMBO no vende ropa básica. Vende pertenencia, actitud y piezas para
-            romper la calle.
+          <BrandLogo size="lg" />
+          <p className="editorial mt-4 max-w-sm text-lg leading-snug text-chrome">
+            MAIMBO <span className="text-accent">|</span> Vende Estilo
+          </p>
+          <p className="mt-3 max-w-sm text-sm text-muted">
+            Local en Sucre — Ostria Reyes 555. Enviamos a todo Bolivia.
           </p>
           <form
             className="mt-6 flex max-w-md gap-2"
@@ -56,40 +75,55 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="display text-2xl text-text">Legal</p>
-          <ul className="mt-4 space-y-2 text-sm text-muted">
-            <li>
-              <a href="#" className="transition hover:text-accent">
-                Términos y condiciones
-              </a>
-            </li>
-            <li>
-              <a href="#" className="transition hover:text-accent">
-                Política de cambios
-              </a>
-            </li>
-            <li>
-              <a href="#" className="transition hover:text-accent">
-                Privacidad
-              </a>
-            </li>
-            <li>
-              <a href="#" className="transition hover:text-accent">
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a href="#" className="transition hover:text-accent">
-                TikTok
-              </a>
-            </li>
+          <p className="display text-2xl text-text">Redes</p>
+          <ul className="mt-4 space-y-3">
+            {socials.map((social) => (
+              <li key={social.label}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col gap-0.5 transition"
+                >
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted group-hover:text-accent">
+                    {social.label}
+                  </span>
+                  <span className="text-sm text-chrome transition group-hover:text-white">
+                    {social.handle}
+                  </span>
+                </a>
+              </li>
+            ))}
           </ul>
+          <div className="mt-6 space-y-2 border-t border-line pt-5 text-sm text-muted">
+            <a href="#" className="block transition hover:text-accent">
+              Términos y condiciones
+            </a>
+            <a href="#" className="block transition hover:text-accent">
+              Política de cambios
+            </a>
+            <a href="#" className="block transition hover:text-accent">
+              Privacidad
+            </a>
+          </div>
         </div>
       </div>
 
       <div className="mx-auto mt-12 flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-line px-4 pt-6 text-[11px] uppercase tracking-[0.16em] text-muted lg:px-6">
-        <p>© {new Date().getFullYear()} MAIMBO · Prototype</p>
-        <p>Streetwear only · Hecho con actitud</p>
+        <p>© {new Date().getFullYear()} MAIMBO · Vende Estilo</p>
+        <div className="flex flex-wrap gap-4">
+          {socials.map((social) => (
+            <a
+              key={`bar-${social.label}`}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-accent"
+            >
+              {social.label}
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   );

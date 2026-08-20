@@ -10,14 +10,26 @@ import { DropsSection } from "@/components/DropsSection";
 import { StoreLocation } from "@/components/StoreLocation";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
+import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { byCollection, products } from "@/data/catalog";
 
 export default function HomePage() {
-  const novedades = products.filter((p) => p.tag === "NEW" || p.tag === "DROP").slice(0, 8);
-  const masVendidos = products.filter((p) => p.tag === "HOT").concat(products.slice(0, 4)).slice(0, 8);
+  const novedades = products
+    .filter((p) => p.tag === "NEW" || p.tag === "DROP")
+    .slice(0, 8);
+
+  const seen = new Set<string>();
+  const masVendidos = [...products.filter((p) => p.tag === "HOT"), ...products]
+    .filter((p) => {
+      if (seen.has(p.id)) return false;
+      seen.add(p.id);
+      return true;
+    })
+    .slice(0, 8);
 
   return (
-    <main>
+    <main className="relative z-[2]">
+      <ParticlesBackground />
       <AnnouncementBar />
       <Header />
       <HeroSlider />

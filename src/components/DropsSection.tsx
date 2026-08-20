@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { drops } from "@/data/catalog";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function DropsSection() {
   return (
@@ -10,6 +11,7 @@ export function DropsSection() {
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
+            <BrandLogo size="sm" href={null} className="mb-3" />
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
               Cultura
             </p>

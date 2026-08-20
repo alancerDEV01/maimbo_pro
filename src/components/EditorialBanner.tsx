@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function EditorialBanner() {
   return (
@@ -16,6 +17,9 @@ export function EditorialBanner() {
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+          <div className="absolute bottom-6 left-6 z-10">
+            <BrandLogo size="md" href={null} />
+          </div>
         </div>
         <motion.div
           initial={{ opacity: 0, x: 24 }}
@@ -23,6 +27,7 @@ export function EditorialBanner() {
           viewport={{ once: true }}
           className="flex flex-col justify-center bg-bg-elevated px-6 py-14 lg:px-14"
         >
+          <BrandLogo size="sm" href={null} className="mb-4 self-start" />
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
             Campaign
           </p>

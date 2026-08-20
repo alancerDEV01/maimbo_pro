@@ -13,6 +13,7 @@
   --danger: #ff3b5c;
   --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
   --font-body: "Archivo", "Helvetica Neue", sans-serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
 }
 
 @theme inline {
@@ -28,6 +29,7 @@
   --color-danger: var(--danger);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-editorial: var(--font-editorial);
 }
 
 * {
@@ -80,6 +82,12 @@ button {
   text-transform: uppercase;
 }
 
+.editorial {
+  font-family: var(--font-editorial);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 .marquee-track {
   display: flex;
   width: max-content;
@@ -112,6 +120,79 @@ button {
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Contenedor de producto: contraste alto, sin blend que apague la foto */
+.product-media {
+  background: #141414;
+}
+
+.product-media img {
+  filter: contrast(1.05) saturate(1.05) brightness(1.08);
+}
+
+.logo-wrap {
+  isolation: isolate;
+}
+
+.logo-aura {
+  background: radial-gradient(
+    circle,
+    rgba(184, 255, 46, 0.45) 0%,
+    rgba(184, 255, 46, 0.12) 42%,
+    transparent 70%
+  );
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.logo-shine {
+  filter: drop-shadow(0 0 10px rgba(184, 255, 46, 0.55))
+    drop-shadow(0 0 28px rgba(184, 255, 46, 0.28));
+  animation: logo-glow 2.2s ease-in-out infinite;
+}
+
+@keyframes logo-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 8px rgba(184, 255, 46, 0.4))
+      drop-shadow(0 0 18px rgba(184, 255, 46, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(184, 255, 46, 0.85))
+      drop-shadow(0 0 42px rgba(184, 255, 46, 0.45));
+  }
+}
+
+@keyframes logo-pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+.logo-ring {
+  pointer-events: none;
+  position: absolute;
+  inset: -8%;
+  border: 1px solid rgba(184, 255, 46, 0.45);
+  border-radius: 999px;
+  animation: logo-pulse-ring 2.6s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-shine,
+  .logo-ring {
+    animation: none;
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {
