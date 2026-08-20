@@ -38,7 +38,7 @@ export const heroes = [
     cta: "Comprar ahora",
     secondary: "Ver novedades",
     image:
-      "https://images.unsplash.com/photo-1523398002811-999ca8ba6e35?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1600&q=80",
   },
   {
     id: "h3",
@@ -60,7 +60,6 @@ export const benefits = [
   { title: "Tienda física", detail: "Sucre · Ostria Reyes 555" },
 ];
 
-/** Fotos bien iluminadas / contraste alto para fondo oscuro */
 const img = {
   suit1:
     "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80",
@@ -69,7 +68,7 @@ const img = {
   suit3:
     "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
   suit4:
-    "https://images.unsplash.com/photo-1523398002811-999ca8ba6e35?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80",
   suit5:
     "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
   suit6:
